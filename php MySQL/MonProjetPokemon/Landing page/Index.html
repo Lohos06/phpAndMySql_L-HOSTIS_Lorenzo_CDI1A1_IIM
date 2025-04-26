@@ -1,0 +1,142 @@
+<!DOCTYPE html> <!-- initialisation du de la page -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../Composants Css/Root.css">
+    <link rel="stylesheet" href="../Composants Css/Header.css">
+    <link rel="stylesheet" href="../Composants Css/Landing.css">
+    <link rel="stylesheet" href="../Composants Css/Swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> <!-- lien avec le fichier Js en ligne de la bibliotheque swiper.js -->
+    <link rel="stylesheet" href="../Composants Css/Footer.css">
+    <link rel="stylesheet" href="../Composants Css/Darkmode.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- dispositif pour le responsive -->
+    <meta name="description" content="Échangez et collectionnez des cartes Pokémon en toute simplicité. Rejoignez notre communauté et trouvez les cartes rares qui vous manquent !"> <!-- description de la page -->
+
+    <title>Pokemon Trading Center The Beginning</title> <!-- Nom de la page -->
+</head>
+
+<body>    
+  <header id="header">
+    <div>
+      <img id="logo" src="../assets/ImagePokemon/Pokeball.png" alt="Pokeball"> <!-- Logo de pokeball -->
+    </div>
+    <button id="BurgerMenuToggle" class="Burger-menu"> <!-- bouton menu burger pour mobile -->
+      ☰
+    </button>
+    <nav id="menu">  <!-- Menu des liens et boutons -->
+      <a href="../Landing page/Index.html">Pokemon Trading Center The Begining</a>
+      <a href="../Card List/Index.html">CardList</a>
+      <a href="../MyCards/Index.html">MyCards</a>
+      <button id="darkModeToggle">Activer le mode sombre</button> <!-- bouton darkmode -->
+      <button id="sign_in" onclick="window.location.href = '../sign_in/Index.html';">Sign in</button>
+      <button id="sign_up" onclick="window.location.href = '../Sign_up/Index.html';">Sign up</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="PokemonBackground"> <!-- Accroche -->
+      <div id="Accroche">
+      <h1>Devenez l'ami de tout les Pokemons</h1>
+      <div>
+        <h2>Venez rencontrer chaque pokemon dans sa forme de carte</h2>
+        <h3>Collectionnez les tous et devenez le meilleur dresseur</h3>
+      </div>
+      <div>
+        <button id="start" onclick="window.location.href = '../Card List/Index.html';">Commencer l'aventure</button>
+      </div>
+    </section>
+
+    <section id="boosters"> <!-- Swiper montrant les boosters -->
+      <div class="Title">
+        <h3>Les Boosters qui n'attende que les meilleurs dresseurs</h3>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 1.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 2.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 3.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 4.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 5.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 6.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 7.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 8.png" />
+          </div>
+          <div class="swiper-slide">
+            <img src="../assets/Boosters/Booster 9.png" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <section id="letter"> <!-- espace de commentaires -->
+      <div class="Title">
+        <h3>Les commentaires des plus grands fans de Pokemon</h3>
+      </div>
+      <section class="espace_comentaires">
+        <div class="comentaire">
+          <h3>Pseudo 1</h3>
+          <p>C'est vraiment super de pouvoir collectionner mes pokemon preferés, cela me rappelle mon enfance</p>
+        </div>
+        <div class="comentaire">
+          <h3>Pseudo 1</h3>
+          <p>C'est vraiment super de pouvoir collectionner mes pokemon preferés, cela me rappelle mon enfance</p>
+        </div>
+        </section>
+
+      <div class="Title">
+        <h3>Les Titres reçus par le site d'echange de carte Pokemon</h3>
+      </div>
+      <section class="liste_prix"> <!-- Liste des prix reçus par le site -->
+        <div class="prix">
+          <img class="trophée" src="../assets/symboles/trophée.png" alt="prix numero 1">
+          <h3>Prix du meilleur site d'echange de carte</h3>
+        </div>
+        <div class="prix">
+          <img class="trophée" src="../assets/symboles/trophée.png" alt="prix numero 1">
+          <h3>Prix du meilleur site d'echange de carte</h3>
+        </div>
+        <div class="prix">
+          <img class="trophée" src="../assets/symboles/trophée.png" alt="prix numero 1">
+          <h3>Prix du meilleur site d'echange de carte</h3>
+        </div>
+        <div class="prix">
+          <img class="trophée" src="../assets/symboles/trophée.png" alt="prix numero 1">
+          <h3>Prix du meilleur site d'echange de carte</h3>
+        </div>
+      </section>
+    </section>
+
+
+
+
+
+  </main>
+  <footer id="footer"> <!-- information pour contacter le responsable du site -->
+    <div>
+        <h3>Nos contacts : Lorenzo.lhostis@edu.devinci.fr</h3>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> <!-- lien avec le fichier en ligne JavaScript de la bibliotheque Swiper.js -->
+<script src="../Script JS/Swiper.js"></script>
+<script src="../Script JS/Darkmode.js"></script>
+<script src="../Script JS/BurgerMenu.js"></script>
+</html> <!-- fin du document -->

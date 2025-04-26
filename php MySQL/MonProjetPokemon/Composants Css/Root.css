@@ -1,0 +1,32 @@
+:root {
+    --skyblue : rgb(0, 162, 255);
+    --blue : rgb(0, 110, 255);
+    --darkmode-blue : rgb(0, 34, 144);
+    --darkmode-nightblue : rgb(0, 28, 45);
+    --red : #b30707;
+    --red-transparent : #b30707da;
+    --darkmode-red : #82020d;
+    --darkmode-red-transparent : #82020ddb;
+    --white : #ffffff;
+    --white-shadow : rgba(255, 255, 255, 0.8);
+    --black : black;
+    --black-shadow : rgba(0, 0, 0, 0.3);
+    --yellow-transparent : rgba(255, 255, 0, 0.8);
+    --darkmode-yellow-transparent : rgba(216, 216, 0, 0.8);
+    --orange : rgb(255, 136, 0);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+body {
+    background-color: var(--skyblue);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    min-height: 565px  ;
+}

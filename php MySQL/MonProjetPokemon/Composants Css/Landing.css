@@ -1,0 +1,115 @@
+#PokemonBackground {
+    width: 100%;
+    height: 750px;
+    background-image: url("../assets/ImagePokemon/PokemonBackground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Accroche {
+    color: var(--white);
+    line-height: 50px;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--red-transparent);
+    border-radius: 15px;
+}
+#start {
+    background-color: var(--blue);
+}
+
+.Title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    color: var(--white);
+    background-color:  var(--red-transparent);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+#boosters{
+    padding: 50px;
+    background-image: url("../assets/ImagePokemon/starters.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#letter{
+    padding: 50px;
+    background-image: url("../assets/ImagePokemon/pokemonletters.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.espace_comentaires{
+    display: flex;
+    width: 100%;
+
+}
+.comentaire {
+    margin: 40px;
+    padding: 20px;
+    background-color: var(--yellow-transparent);
+    color: var(--black);
+    border: 2px solid var(--black);
+}
+
+.liste_prix{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap
+}
+.prix{
+    padding: 20px;
+    margin: 40px;
+    width: 15%;
+    height: auto;
+    display: block;
+    background-color: var(--red-transparent);
+    border-radius: 10px;
+    color: var(--white);
+    text-align: center;
+}
+.trophée{
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 768px) {
+
+    .Accroche {
+        width: 90%;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    .Accroche h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    .espace_comentaires, .liste_prix {
+        flex-direction: column;
+    }
+
+    .prix {
+        width: 40%;
+    }
+
+}

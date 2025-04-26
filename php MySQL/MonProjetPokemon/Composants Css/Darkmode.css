@@ -1,0 +1,121 @@
+body.dark-mode {
+    background-color: var(--darkmode-nightblue);
+}
+
+
+#header.dark-mode,
+#sign_up.dark-mode {
+    background-color: var(--darkmode-red);
+}
+#logo.dark-mode {
+    filter: brightness(80%);
+}
+#menu.dark-mode {
+    background-color: var(--darkmode-blue);
+    border: 3px solid var(--white-shadow);
+}
+#menu a.dark-mode {
+    color: var(--white-shadow);
+}
+button.dark-mode {
+    border: 2px solid var(--white-shadow);
+}
+#darkModeToggle {
+    min-width: 185px;
+}
+
+
+#footer.dark-mode {
+    background-color: var(--darkmode-blue);
+}
+
+
+
+#searchBar.dark-mode,
+#statFilter.dark-mode,
+#typeFilter.dark-mode{
+    background-color: var(--white-shadow);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#exchange.dark-mode {
+    background-color: var(--darkmode-red);
+}
+
+.pokemon-card.dark-mode {
+    background-color: var(--white-shadow);
+    transition: background-color 0.3s, color 0.3s;
+    border: 2px solid var(--white);
+}
+
+
+
+#registrationForm.dark-mode {
+    background-color: var(--white-shadow);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pseudo.dark-mode,
+#email.dark-mode,
+#password.dark-mode,
+#confirmPassword.dark-mode {
+    background-color: var(--white-shadow);
+}
+
+input[type="radio"].dark-mode {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    background-color: var(--white-shadow);
+}
+
+input[type="radio"].dark-mode:checked {
+    background-color: var(--blue);
+}
+
+#submit.dark-mode {
+    background-color: var(--darkmode-red);
+}
+
+
+
+#PokemonBackground.dark-mode,
+#boosters.dark-mode,
+#letter.dark-mode {
+    filter: brightness(80%);
+}
+
+#Accroche.dark-mode {
+    background-color: var(--darkmode-red-transparent);
+}
+
+#start.dark-mode {
+    background-color: var(--darkmode-blue);
+}
+
+.Title.dark-mode,
+.prix.dark-mode {
+    background-color: var(--darkmode-red-transparent);
+    color: var(--white-shadow);
+}
+
+.comentaire.dark-mode {
+    background-color: var(--darkmode-yellow-transparent);
+}
+
+
+#exchangeButton.dark-mode {
+    background-color: var(--darkmode-red);
+}
+
+#exchangeForm.dark-mode {
+    background-color: var(--darkmode-yellow-transparent);
+    border: 2px solid var(--white-shadow);
+}
+
+#ficheIndividuelle.dark-mode {
+    background-color: var(--darkmode-nightblue);
+    color: var(--white-shadow);
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Composants Css/Root.css">
+    <link rel="stylesheet" href="../Composants Css/Header.css">
+    <link rel="stylesheet" href="../Composants Css/FicheIndividuelle.Css">
+    <link rel="stylesheet" href="../Composants Css/Footer.css">
+    <link rel="stylesheet" href="../Composants Css/Darkmode.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <div>
+          <img id="logo" src="../assets/ImagePokemon/Pokeball.png" alt="Pokeball"> <!-- Logo de pokeball -->
+        </div>
+        <button id="BurgerMenuToggle" class="Burger-menu"> <!-- bouton menu burger pour mobile -->
+          ☰
+        </button>
+        <nav id="menu">  <!-- Menu des liens et boutons -->
+          <a href="../Landing page/Index.html">Pokemon Trading Center The Begining</a>
+          <a href="../Card List/Index.html">CardList</a>
+          <a href="../MyCards/Index.html">MyCards</a>
+          <button id="darkModeToggle">Activer le mode sombre</button> <!-- bouton darkmode -->
+          <button id="sign_in" onclick="window.location.href = '../sign_in/Index.html';">Sign in</button>
+          <button id="sign_up" onclick="window.location.href = '../Sign_up/Index.html';">Sign up</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id = ficheIndividuelle>
+            <div id="part1"></div>
+            <div id="part2-3">
+                <div id="part2"></div>
+                <div id="part3"></div>
+            </div>
+            <div id="part4"></div>
+        </div>
+    </main>
+
+    <footer id="footer"> <!-- information pour contacter le responsable du site -->
+        <div>
+            <h3>Nos contacts : Lorenzo.lhostis@edu.devinci.fr</h3>
+        </div>
+    </footer>
+  
+    <script src="../Script JS/pokemonDetails.js"></script>
+    <script src="../Script JS/Darkmode.js"></script>
+    <script src="../Script JS/BurgerMenu.js"></script>
+
+</body>
+</html>

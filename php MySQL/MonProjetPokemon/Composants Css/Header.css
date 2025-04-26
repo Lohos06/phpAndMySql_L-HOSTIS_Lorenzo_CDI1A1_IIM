@@ -1,0 +1,129 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: var(--red);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+    transition: filter 0.3s ease;
+}
+
+.Burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--white);
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+    transition: transform 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#menu {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid var(--white);
+    width: 90%;
+    height: 100%;
+    font-size: 1.2rem;
+    background-color: var(--blue);
+    transition: background-color 0.3s, color 0.3s;
+    padding: 10px; 
+    box-shadow: 0 4px 8px var(--black-shadow);
+}
+#menu a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    margin: 5px;
+}
+#menu a:hover {
+    color: var(--white);
+    text-shadow: 0 0 5px var(--white-shadow);
+}
+#darkModeToggle{
+    background-color: var(--black);
+}
+#sign_up {
+    background-color:  var(--red);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .Burger-menu {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .Burger-menu.active {
+        animation: rotation 0.5s ease-out forwards;
+    }
+    
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+    }
+
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #menu a, #menu h3, #menu button {
+        margin: 10px 0;
+        font-size: 1rem;
+    }
+
+    #menu.active {
+        display: flex;
+        animation: translation 0.5s ease-out forwards;
+    }
+
+    @keyframes translation {
+        from {
+            transform: translateY(-500px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+    }
+
+} 

@@ -1,0 +1,13 @@
+.icons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.heart {
+    cursor: pointer;
+}
+
+.info {
+    cursor: pointer;
+}

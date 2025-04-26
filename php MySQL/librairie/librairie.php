@@ -1,6 +1,6 @@
 <?php
 
-try { // connexion a la BDD
+try { // connexion a la BDD avec PDO
     $pdo = new PDO('mysql:host=localhost;dbname=catalogue_livres;charset=utf8', 'root', '');
 } catch(PDOException $e) {
     die('erreur de connexion :' .$e->getMessage()); // erreur si connexion echouée
@@ -8,22 +8,22 @@ try { // connexion a la BDD
 
 
 
-if (isset($_POST['submit'])) {
-    $titre = $_POST['titre'];
-    $auteur = $_POST['auteur'];
-    $annee_publication = $_POST['annee_publication'];
-    $disponible = isset($_POST['disponible']) ? 1 : 0;
+if (isset($_POST['submit'])) { // on verifie si on a appuyer sur le boutton de validation du formulaire
+    $titre = $_POST['titre']; // si oui, on stocke en variable les données rentrées dans le formulaire, ici le titre
+    $auteur = $_POST['auteur']; // l'auteur
+    $annee_publication = $_POST['annee_publication']; // l'année de publication
+    $disponible = isset($_POST['disponible']) ? 1 : 0; // la disponibilité si la checkbox a été cochée ou non
 
-    $envoie = $pdo->prepare("INSERT INTO livres (titre, auteur, annee_publication, disponible) VALUES (?, ?, ?, ?)");
-    $envoie -> execute([$titre, $auteur, $annee_publication, $disponible]);
+    $envoie = $pdo->prepare("INSERT INTO livres (titre, auteur, annee_publication, disponible) VALUES (?, ?, ?, ?)"); // on prepare l'envoie des données
+    $envoie -> execute([$titre, $auteur, $annee_publication, $disponible]); // on donne les valeurs a envoyer
 
-    header("Location: " . $_SERVER['PHP_SELF']);
-    exit();
+    header("Location: " . $_SERVER['PHP_SELF']); // on recharge la page en redirigeant sur elle meme
+    exit(); // on arrete le programme
 }
 
 $infos = $pdo->query("SELECT * FROM livres"); // infos recupérés de la BDD actualisées du formulaire
 
-$livres = $infos->fetchAll(PDO::FETCH_ASSOC);
+$livres = $infos->fetchAll(PDO::FETCH_ASSOC); // on fetch les livres de la BDD et les mets en tableaux associatif pour pouvoir les afficher comme on le souhaite, ici on donne toute les infos dans le tableaux
 
 
 // envoie et suppression pour ne pas interferer
@@ -61,10 +61,10 @@ $livres = $infos->fetchAll(PDO::FETCH_ASSOC);
             <?php            
             foreach($livres as $key => $livres2) { // chaque ligne correspond a un livre
                 echo "<tr>";
-                echo "<td>" . $livres2["titre"] . "</td>";
-                echo "<td>" . $livres2["auteur"] . "</td>";
-                echo "<td>" . $livres2["annee_publication"] . "</td>";
-                echo "<td>" . ($livres2["disponible"] ? "Oui" : "Non") . "</td>";
+                echo "<td>" . $livres2["titre"] . "</td>"; // la colonne pour les titres
+                echo "<td>" . $livres2["auteur"] . "</td>"; // la colonne pour les auteurs
+                echo "<td>" . $livres2["annee_publication"] . "</td>"; // la colonne pour les années de publication
+                echo "<td>" . ($livres2["disponible"] ? "Oui" : "Non") . "</td>"; // la colonne pour la disponinilité du livre
                 echo "</tr>";
             }
             ?>
@@ -73,7 +73,7 @@ $livres = $infos->fetchAll(PDO::FETCH_ASSOC);
 
     <h2>Ajouter un Livre</h2> <!-- Formulaire d'envoie d'un livre dans la BDD -->
 
-    <form action="" method = "POST">
+    <form action="" method = "POST"> <!-- Formulaire en methode POST -->
 
     <label for="titre">entrer un titre de Livre</label> 
     <input type="text" name = "titre" id = "titre" placeholder = "Texte"> <!-- champ de texte pour l'envoie du titre du livre -->
