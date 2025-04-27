@@ -7,7 +7,7 @@
 </head>
 <body>
     <a href="formulaire\inscription.php">formulaire</a>
-    <a href="librairie\librairie.php">Exercice 1</a>
+    <a href="librairie\librairie.php">librairie</a>
     <a href="MonProjetPokemon\MyCards\index.php">projet d'axe favoris</a>
     <a href="MonProjetPokemon\Sign_Up\index.php">projet d'axe inscription</a>
 </body>

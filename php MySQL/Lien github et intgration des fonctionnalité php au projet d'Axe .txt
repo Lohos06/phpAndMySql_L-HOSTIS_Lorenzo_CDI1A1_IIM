@@ -12,3 +12,8 @@ le update aussi avec la description qui peut s'ajouter sur retirer et se modifie
 le insert se fait avec les cartes dans MyCards pour les favoris, on INSERT dans la table favoris une ligne correspondant au user_id et a la carte mise en favoris avec card_id
 
 pour le DELETE on supprime cette carte de la table si on reclique sur le cœur
+
+
+Le lien GitHub : https://github.com/Lohos06/phpAndMySql_L-HOSTIS_Lorenzo_CDI1A1_IIM.git
+
+le Lien de la Vidéo YouTube d'explication : https://youtu.be/TFhf_ouz0OU
