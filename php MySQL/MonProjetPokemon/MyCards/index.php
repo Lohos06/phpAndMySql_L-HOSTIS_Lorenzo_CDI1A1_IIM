@@ -97,7 +97,7 @@
 
     <script src="../Script JS/modal.js"></script>
     <script src="../Script JS/Darkmode.js"></script>
-    <script src="../Script JS/cardgenerator.js"></script>
+    <script src="../Script JS/favoritegenerator.js"></script>
     <script src="../Script JS/BurgerMenu.js"></script>
 
 </body>

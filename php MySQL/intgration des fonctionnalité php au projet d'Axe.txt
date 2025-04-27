@@ -1,0 +1,14 @@
+note pour l'évaluation :
+
+Les fonctionnalité construite sont : le système d'inscription et de connexion,
+ un tri sur un base de donnée sur la page profil pour connaitre par ordre croissant ou décroissant les id des Pokémon mis en favoris
+
+le CRUD :
+
+le select donc est fait par ce tri sur la page de profil
+
+le update aussi avec la description qui peut s'ajouter sur retirer et se modifier
+
+le insert se fait avec les cartes dans MyCards pour les favoris, on INSERT dans la table favoris une ligne correspondant au user_id et a la carte mise en favoris avec card_id
+
+pour le DELETE on supprime cette carte de la table si on reclique sur le cœur

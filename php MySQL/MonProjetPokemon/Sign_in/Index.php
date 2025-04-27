@@ -24,14 +24,17 @@ if(isset($_POST['submit'])) { // on verifie si un post a été fait
 
     if(empty($erreur)) {
 
-        $check = $pdo -> prepare("SELECT username, email, password_hash FROM users WHERE email = ?"); // dans le cas ou tout est valide, on recupere les infos en lien avec l'adresse mail donnée dans la BDD
+        $check = $pdo -> prepare("SELECT id, username, email, password_hash FROM users WHERE email = ?"); // dans le cas ou tout est valide, on recupere les infos en lien avec l'adresse mail donnée dans la BDD
         $check -> execute([$email]); // on execute la demande
         $user = $check -> fetch(PDO::FETCH_ASSOC); // on rend manipulable les infos en question en les mettant en tableaux associatif
 
         if ($user && password_verify($password, $user['password_hash'])) { // on verifie de un l'existence de l'utilisateur et la correpondance entre le mdp hashé stocke en BDD et le hashage du mdp rentré dans le formulaire.
             session_start(); // si on arrive a se connecter on demarre une session
+            $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username']; // on stock en variable de session le username
             $_SESSION['email'] = $user['email']; // de meme avec l'email
+
+            var_dump($_SESSION);
 
             header('Location:../profil/profil.php'); // on redirige vers la page de profil
             exit(); // on arrete le programme

@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) { // on verifie si on a soumis le formulaire en ver
     $envoie = $pdo->prepare("INSERT INTO users (username, email, password_hash) VALUES (?, ?, ?)"); // on prepare l'envoir des donnée en crant un ligne dans la table utilisateir contenant username, email et mdp
     $envoie -> execute([$username, $email, $hash]); // on met en valeur de chacuns le contenu mis dans les cases du formulaire lors de la validation de celui ci
 
-    header('Location:Sign_in.php'); // on redirige vers la page de connexion
+    header('Location:../Sign_In/index.php'); // on redirige vers la page de connexion
     exit(); // on stop le programme
     }
 }
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) { // on verifie si on a soumis le formulaire en ver
       <a href="../Card List/Index.html">CardList</a>
       <a href="../MyCards/Index.html">MyCards</a>
       <button id="darkModeToggle">Activer le mode sombre</button> <!-- bouton darkmode -->
-      <button id="sign_in" onclick="window.location.href = '../sign_in/Index.html';">Sign in</button>
+      <button id="sign_in" onclick="window.location.href = '../sign_in/Index.php';">Sign in</button>
       <button id="sign_up" onclick="window.location.href = '../Sign_up/Index.php';">Sign up</button>
     </nav>
   </header>
